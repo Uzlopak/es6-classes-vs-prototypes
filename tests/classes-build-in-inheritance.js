@@ -1,10 +1,12 @@
 "use strict";
 
+class X extends Error{};
+
 (function(){
     var root = this;
 
     var testClassesBuildInInheritance = function (N){
-        class X extends Date{};
+        // class X extends Date{};
 
         var t1 = Date.now();
         for(var i = 0; i<= N; i++){

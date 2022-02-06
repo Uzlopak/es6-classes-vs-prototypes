@@ -1,15 +1,16 @@
 "use strict";
 
+function Y(){};
+Y.prototype = Object.create(Error.prototype);
+
 (function(){
     var root = this;
     
     var testProtosBuildInInheritance = function (N){
-        function Y(){};
-        Y.prototype = Object.create(Date.prototype);
 
         var t1 = Date.now();
         for(var i = 0; i<= N; i++){
-            new Y();
+            const b = new Y();
         }
 
         var t2 = Date.now();
